@@ -7,22 +7,17 @@ class BoundedCounter extends React.Component {
   };
   add = (state, props) => {
     this.setState((state, props) => ({
-      count: state.count + 1
+      count: state.count + 1,
+      disabled: (this.props.max <= this.state.count) ? true : false
     }));
   };
   substract = (state, props) => {
     this.setState((state, props) => ({
-      count: state.count - 1
+      count: state.count - 1,
+      disabled: (this.props.min >= this.state.count) ? true : false
     }));
   };
   
-//   componentDidUpdate() {
-//     if ((this.props.min >= this.state.count) || (this.props.max <= this.state.count)) {
-//         this.setState((state, props) => ({
-//             disability: true
-//         }));
-//     }
-//   }
   render() {
     return (
       <div>
