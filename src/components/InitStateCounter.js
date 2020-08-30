@@ -7,20 +7,16 @@ class InitStateCounter extends React.Component {
     disabledMinus: false
   };
   add = (state, props) => {
+    let max = this.props.max - 1;
     this.setState((state, props) => ({
-      disabledPlus:
-        (this.props.max = this.props.max - 1) <= this.state.count
-          ? true
-          : false,
+      disabledPlus: max <= this.state.count ? true : false,
       count: state.count + 1
     }));
   };
   substract = (state, props) => {
+    let min = this.props.min + 1;
     this.setState((state, props) => ({
-      disabledMinus:
-        (this.props.min = this.props.min + 1) >= this.state.count
-          ? true
-          : false,
+      disabledMinus: min >= this.state.count ? true : false,
       count: state.count - 1
     }));
   };

@@ -1,9 +1,8 @@
 import React from "react";
-// import PropTypes from "prop-types";
 
-class BoundedCounter extends React.Component {
+class CallbackCounter extends React.Component {
   state = {
-    count: 0,
+    count: this.props.value,
     disabledPlus: false,
     disabledMinus: false
   };
@@ -25,7 +24,7 @@ class BoundedCounter extends React.Component {
   render() {
     return (
       <div>
-        <h2>Задача 1.3 – Counter with bounds</h2>
+        <h2>Задача 1.5 – Counter with callback</h2>
         <p>Button was clicked</p>
         <button disabled={this.state.disabledMinus} onClick={this.substract}>
           -
@@ -39,9 +38,4 @@ class BoundedCounter extends React.Component {
   }
 }
 
-// BoundedCounter.propTypes = {
-//   max: PropTypes.number,
-//   min: PropTypes.number
-// };
-
-export default BoundedCounter;
+export default CallbackCounter;
