@@ -21,6 +21,10 @@ class CallbackCounter extends React.Component {
     }));
   };
 
+  value = () => {
+    console.log(this.state.count);
+  };
+
   render() {
     return (
       <div>

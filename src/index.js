@@ -5,6 +5,7 @@ import TwoButtonsCounter from './components/TwoButtonsCounter';
 import BoundedCounter from './components/BoundedCounter';
 import InitStateCounter from './components/InitStateCounter';
 import CallbackCounter from './components/CallbackCounter';
+import RGBCounter from './components/RGBCounter';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
     <BoundedCounter min={-10} max={10} />
     <InitStateCounter value={5} min={-10} max={10} />
     <CallbackCounter value={5} />
+    <RGBCounter red={5} green={7} blue={10} />
   </React.StrictMode>,
   document.getElementById('root')
 );
