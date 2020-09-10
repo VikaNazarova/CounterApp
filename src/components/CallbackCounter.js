@@ -4,9 +4,11 @@ class CallbackCounter extends React.Component {
   state = {
     count: this.props.value,
     disabledPlus: false,
-    disabledMinus: false
+    disabledMinus: false,
+    onChange: this.props.onChange
   };
   add = (state, props) => {
+    
     let max = this.props.max - 1;
     this.setState((state, props) => ({
       disabledPlus: max <= this.state.count ? true : false,
@@ -20,15 +22,15 @@ class CallbackCounter extends React.Component {
       count: state.count - 1
     }));
   };
+  componentDidUpdate() {
+    this.state.onChange(this.state.count);
+  }
 
-  value = () => {
-    console.log(this.state.count);
-  };
 
   render() {
     return (
       <div>
-        <h2>Задача 1.5 – Counter with callback</h2>
+        <h2>Задача 1.5 – Counter with init state</h2>
         <p>Button was clicked</p>
         <button disabled={this.state.disabledMinus} onClick={this.substract}>
           -

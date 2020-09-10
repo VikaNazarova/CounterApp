@@ -15,10 +15,9 @@ ReactDOM.render(
     <TwoButtonsCounter />
     <BoundedCounter min={-10} max={10} />
     <InitStateCounter value={5} min={-10} max={10} />
-    <CallbackCounter value={5} />
+    <CallbackCounter value={5} onChange={value => console.log(value)} />
     <RGBCounter red={5} green={7} blue={10} />
     <RGBColors red={5} green={5} blue={5} color="#006363" />
   </React.StrictMode>,
   document.getElementById('root')
 );
-

@@ -4,7 +4,7 @@ class InitStateCounter extends React.Component {
   state = {
     count: this.props.value,
     disabledPlus: false,
-    disabledMinus: false
+    disabledMinus: false,
   };
   add = (state, props) => {
     let max = this.props.max - 1;
