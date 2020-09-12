@@ -7,6 +7,7 @@ import InitStateCounter from './components/InitStateCounter';
 import CallbackCounter from './components/CallbackCounter';
 import RGBCounter from './components/RGBCounter';
 import RGBColors from './components/RGBColors';
+import ColorPicker from './components/ColorPicker';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
     <CallbackCounter value={5} onChange={value => console.log(value)} />
     <RGBCounter red={5} green={7} blue={10} />
     <RGBColors red={5} green={5} blue={5} color="#006363" />
+    <ColorPicker value={'aaffcc'} onChange={color => console.log(color)} />
   </React.StrictMode>,
   document.getElementById('root')
 );
