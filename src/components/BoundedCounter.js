@@ -1,23 +1,20 @@
 import React from "react";
-// import PropTypes from "prop-types";
 
 class BoundedCounter extends React.Component {
   state = {
     count: 0,
-    disabledPlus: false,
-    disabledMinus: false
+    min: this.props.min,
+    max: this.props.max
   };
+
   add = (state, props) => {
-    let max = this.props.max - 1;
     this.setState((state, props) => ({
-      disabledPlus: max <= this.state.count ? true : false,
       count: state.count + 1
     }));
   };
+
   substract = (state, props) => {
-    let min = this.props.min + 1;
     this.setState((state, props) => ({
-      disabledMinus: min >= this.state.count ? true : false,
       count: state.count - 1
     }));
   };
@@ -27,21 +24,16 @@ class BoundedCounter extends React.Component {
       <div>
         <h2>Задача 1.3 – Counter with bounds</h2>
         <p>Button was clicked</p>
-        <button disabled={this.state.disabledMinus} onClick={this.substract}>
+        <button disabled={this.state.min >= this.state.count ? true : false} onClick={this.substract}>
           -
         </button>
         <span style={{ margin: "0 1rem" }}>{this.state.count} times</span>
-        <button disabled={this.state.disabledPlus} onClick={this.add}>
+        <button disabled={this.state.max <= this.state.count ? true : false} onClick={this.add}>
           +
         </button>
       </div>
     );
   }
 }
-
-// BoundedCounter.propTypes = {
-//   max: PropTypes.number,
-//   min: PropTypes.number
-// };
 
 export default BoundedCounter;
