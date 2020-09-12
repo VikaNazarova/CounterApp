@@ -22,7 +22,7 @@ class RGBCounter extends React.Component {
   render() {
     return (
       <div>
-        <h2>Задача 1.6 – RGB Counters</h2>
+        <h2>Task 1.6 – RGB Counters</h2>
         <p>Red</p>
         <button onClick={this.substract.bind(this, "red")}>-</button>
         <span style={{ margin: "0 1rem" }}>{this.state.red} times</span>

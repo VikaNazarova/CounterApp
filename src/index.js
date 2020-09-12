@@ -11,7 +11,7 @@ import ColorPicker from './components/ColorPicker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Задача 1 – Counter</h1>
+    <h1>Task 1 – Counter</h1>
     <SimpleCounter />
     <TwoButtonsCounter />
     <BoundedCounter min={-10} max={10} />
@@ -19,7 +19,7 @@ ReactDOM.render(
     <CallbackCounter value={5} onChange={value => console.log(value)} />
     <RGBCounter red={5} green={7} blue={10} />
     <RGBColors red={5} green={5} blue={5} color="#006363" />
-    <ColorPicker value={'aaffcc'} onChange={color => console.log(color)} />
+    <ColorPicker value="aaffcc" onChange={color => console.log(color)} />
   </React.StrictMode>,
   document.getElementById('root')
 );

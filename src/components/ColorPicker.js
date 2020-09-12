@@ -15,39 +15,31 @@ class ColorPicker extends React.Component {
         red: this.hexToRGB(this.props.value)[0] || 0,
         green: this.hexToRGB(this.props.value)[1] || 0,
         blue: this.hexToRGB(this.props.value)[2] || 0,
-        color: `rgb(${this.hexToRGB(this.props.value)})` || 0,
-        onChange: this.props.onChange
+        color: `rgb(${this.hexToRGB(this.props.value)})`
     };
 
     substract(color) {
         this.setState((state, props) => ({
-            [color]: state.[color] - 1
-        }));
-
-        this.setState((state, props) => ({
+            [color]: state.[color] - 1,
             color: `rgb(${this.state.red}, ${this.state.green}, ${this.state.blue})`
         }));
     }
 
     add(color) {
         this.setState((state, props) => ({
-            [color]: state.[color] + 1
-        }));
-
-        this.setState((state, props) => ({
+            [color]: state.[color] + 1,
             color: `rgb(${this.state.red}, ${this.state.green}, ${this.state.blue})`
         }));
     }
 
     componentDidUpdate() {  
-        this.state.onChange(this.state.color);
+        this.props.onChange(this.state.color);
     }
-
 
   render() {
     return (
     <div>
-        <h2>Задача 1.8 – ColorPicker</h2>
+        <h2>Task 1.8 – ColorPicker</h2>
 
         <div style={{ width: "50px", 
         height: "30px", 

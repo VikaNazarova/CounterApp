@@ -22,13 +22,13 @@ class BoundedCounter extends React.Component {
   render() {
     return (
       <div>
-        <h2>Задача 1.3 – Counter with bounds</h2>
+        <h2>Task 1.3 – Counter with bounds</h2>
         <p>Button was clicked</p>
-        <button disabled={this.state.min >= this.state.count ? true : false} onClick={this.substract}>
+        <button disabled={this.state.min >= this.state.count} onClick={this.substract}>
           -
         </button>
         <span style={{ margin: "0 1rem" }}>{this.state.count} times</span>
-        <button disabled={this.state.max <= this.state.count ? true : false} onClick={this.add}>
+        <button disabled={this.state.max <= this.state.count} onClick={this.add}>
           +
         </button>
       </div>

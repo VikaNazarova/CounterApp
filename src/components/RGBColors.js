@@ -11,12 +11,13 @@ class RGBColors extends React.Component {
   render() {
     return (
       <div>
-        <h2>Задача 1.7 – RGB Colors</h2>
+        <h2>Task 1.7 – RGB Colors</h2>
+        <p>From one prop:</p>
         <div style={{ width: "50px", 
         height: "30px", 
         backgroundColor: this.state.color }}>
         </div> 
-        <p>Задача со звездочкой:</p>
+        <p>From separate props:</p>
         <div style={{ width: "50px", 
         height: "30px", 
         backgroundColor: `rgb(${this.state.red}, ${this.state.green}, ${this.state.blue})` }}>
