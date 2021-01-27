@@ -1,4 +1,9 @@
 # Counter App
 Решение задач со счетчиком кликов на React
 
-Источник задач https://github.com/lskjs/ux/blob/master/blog/junior/task1.md
+Реализация: 
+https://vikanazarova.github.io/CounterApp/
+
+Источник задач: 
+https://github.com/lskjs/ux/blob/master/blog/junior/task1.md
+
