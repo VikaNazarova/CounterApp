@@ -1,0 +1,2 @@
+body{font-family:"Trebuchet MS","Lucida Sans Unicode","Lucida Grande","Lucida Sans",Arial,sans-serif}#root{width:80vw;margin:10vh auto}#grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));grid-gap:1rem}button{color:#fff;font-weight:700;font-size:1rem;font-family:"Trebuchet MS";border:none;border-radius:0;padding:.5rem 1rem;background:#292d3e}button:hover{color:#292d3e;background:#b0afcc}
+/*# sourceMappingURL=main.0d3efd17.chunk.css.map */
